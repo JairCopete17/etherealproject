@@ -1,18 +1,16 @@
-const bitcoinChart = document.getElementById('bitcoin-chart').getContext('2d')
-
-const btcData = async () => {
-	const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30d&interval=daily`)
+const fetchToken = async (currency) => {
+	const response = await fetch(`https://api.coingecko.com/api/v3/coins/${currency}/market_chart?vs_currency=usd&days=30d&interval=daily`)
 	const data = await response.json()
 	const times = data.prices.map(e => e[0])
 	const prices = data.prices.map(e => e[1])
 	return { times, prices }
 }
 
-async function createBtcChart() {
-  let { times, prices } = await btcData()
+const createTokenChart = async (token, gradientR, gradientG, gradientB) => {
+  let { times, prices } = await fetchToken(token)
 
-  let gradient = bitcoinChart.createLinearGradient(0, 0, 0, 400)
-  gradient.addColorStop(0, 'rgba(247,147,26,.5)')
+  let gradient = document.getElementById(`${token}-chart`).getContext('2d').createLinearGradient(0, 0, 0, 400)
+  gradient.addColorStop(0, `rgba(${gradientR},${gradientG},${gradientB},.5)`)
   gradient.addColorStop(.85, 'rgba(255,193,119,0)')
 
   const data = {
@@ -20,7 +18,7 @@ async function createBtcChart() {
       datasets: [{
         backgroundColor: gradient,
         borderCapStyle: 'round',
-        borderColor: 'rgba(247,147,26,1)',
+        borderColor: `rgba(${gradientR},${gradientG},${gradientB},1)`,
         borderJoinStyle: 'round',
         borderWidth: 3,
         data: prices,
@@ -54,7 +52,7 @@ async function createBtcChart() {
     }
   }
 
- let btcChart = new Chart( bitcoinChart, config )
+ let chart = new Chart( document.getElementById(`${token}-chart`).getContext('2d'), config )
 }
 
-createBtcChart()
+createTokenChart('bitcoin',247,147,26)
