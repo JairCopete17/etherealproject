@@ -1,3 +1,7 @@
+@import url(hero.css);
+@import url(header.css);
+@import url(cards.css);
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,7 +10,6 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
-	padding: 10px 12vw;
   min-height: 100vh;
   font-size: 14px;
 	line-height: 1.4;

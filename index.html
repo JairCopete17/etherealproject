@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="js/createChart.js"></script>
   </head>
   <body>
     <header>
@@ -19,7 +23,7 @@
           <li><a href="#">News</a></li>
         </ul>
         <ul class="header-control">
-          <li class="header-control_portfolio"><a href="#portfolio"><img src="./images/Work.svg" alt="Portfolio" class="header-control_icons">Portfolio</a></li>
+          <li class="header-control_portfolio"><a href="#"><img src="./images/Work.svg" alt="Portfolio" class="header-control_icons">Portfolio</a></li>
           <li><a href="#"><img src="./images/Notification.svg" alt="Notifications" class="header-control_icons"></a></li>
           <li><a href="#"><img src="./images/Setting.svg" alt="Theme selector" class="header-control_icons"></a></li>
           <li><a href="#"><img src="./images/Profile.svg" alt="Profile" class="header-control_icons"></a></li>
@@ -27,8 +31,34 @@
       </nav>
     </header>
     <section class="hero">
+      <img src="./images/hero.svg" alt="Hero" class="hero-image">
+      <h1>Today's Cryptocurrencies Prices</h1>
+      <p id="status"></p>
     </section>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <section class="cards">
+      <article class="cc_card">
+        <div class="cc_card-name">
+          <div>
+            <img src="" alt="Bitcoin's logo" id="bitcoin-image">
+            <a href="" id="bitcoin-link"><h2>Bitcoin</h2></a>
+          </div>
+          <p id="bitcoin-id">BTC</p>
+        </div>
+        <div class="cc_card-chart">
+          <canvas id="bitcoin-chart"></canvas>
+        </div>
+        <div class="cc_card-activity">
+          <div>
+            <p class="cc_card-subtitle">Price</p>
+            <p class="cc_card-price" id="bitcoin-price"></p>
+          </div>
+          <div>
+            <p class="cc_card-subtitle">24h %</p>
+            <p id="bitcoin-change"></p>
+          </div>
+          <a href="" id="bitcoin-trade" target="_blank">Trade</a>
+        </div>
+      </article>
+    </section>
   </body>
 </html>
