@@ -31,34 +31,44 @@
       </nav>
     </header>
     <section class="hero">
-      <img src="./images/hero.svg" alt="Hero" class="hero-image">
-      <h1>Today's Cryptocurrencies Prices</h1>
-      <p id="status"></p>
+      <figure class="hero_box">
+        <div class="hero_box-img">
+          <img src="./images/hero.svg" alt="Hero" class="hero-image">
+        </div>
+      </figure>
+      <h1 class="hero-title">Inicia tu camino al <span class="text-gradient">Metaverso</span></h1>
     </section>
     <section class="cards">
-      <article class="cc_card">
-        <div class="cc_card-name">
-          <div>
-            <img src="" alt="Bitcoin's logo" id="bitcoin-image">
-            <a href="" id="bitcoin-link"><h2>Bitcoin</h2></a>
+      <section class="cryptocurrencies">
+        <h2 class="card-title">Cryptocurrencies</h2>
+        <article class="cc_card">
+          <div class="cc_card-main">
+            <div class="cc_card-name">
+              <div>
+                <img src="" alt="Bitcoin's logo" id="bitcoin-image">
+                <a href="" id="bitcoin-link"><h2>Bitcoin</h2></a>
+              </div>
+              <p id="bitcoin-id">BTC</p>
+            </div>
+            <div class="cc_card-chart">
+              <canvas id="bitcoin-chart" class="cc_card-basic-chart"></canvas>
+            </div>
           </div>
-          <p id="bitcoin-id">BTC</p>
-        </div>
-        <div class="cc_card-chart">
-          <canvas id="bitcoin-chart"></canvas>
-        </div>
-        <div class="cc_card-activity">
-          <div>
-            <p class="cc_card-subtitle">Price</p>
-            <p class="cc_card-price" id="bitcoin-price"></p>
+          <div class="cc_card-activity">
+            <div>
+              <p class="cc_card-subtitle">Price</p>
+              <p class="cc_card-price" id="bitcoin-price"></p>
+            </div>
+            <div>
+              <p class="cc_card-subtitle">24h %</p>
+              <p id="bitcoin-change"></p>
+            </div>
+            <!-- <a href="" id="bitcoin-trade" target="_blank">Trade</a> -->
           </div>
-          <div>
-            <p class="cc_card-subtitle">24h %</p>
-            <p id="bitcoin-change"></p>
-          </div>
-          <a href="" id="bitcoin-trade" target="_blank">Trade</a>
-        </div>
-      </article>
+        </article>
+      </section>
+      <section class="defi"></section>
+      <section class="nft"></section>
     </section>
   </body>
 </html>

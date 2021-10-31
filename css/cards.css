@@ -1,29 +1,46 @@
 .cards {
 	width: 100%;
 	min-height: 20vh;
-	margin: 20px 0;
-	padding: 20px 10vw;
+	background-color: #18191d;
 	color: #fff;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+}
 
-	margin-bottom: 300px;
+.cryptocurrencies {
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.card-title {
+	margin-top: 10px;
+	margin-bottom: 30px;
 }
 
 .cc_card {
 	width: 500px;
+	height: 220px;
 	border: 1px solid rgba(255, 255, 255, 0.125);
 	border-radius: 12px;
-	margin: 0 20px;
+	/* margin: 0 20px; */
 	backdrop-filter: blur(16px) saturate(100%);
 	background-color: rgba(20, 20, 22, 0.75);
+	display: flex;
+	flex-direction: row;
 }
 
-.cc_card:hover{
+.cc_card:hover {
 	position: relative;
 	top: -1px;
 	box-shadow: rgba(247,147,26,.1) 0px 20px 25px -5px, rgba(247,147,26,.04) 0px 10px 10px -5px;
 	transition: all .3s ease-out;
+}
+
+.cc_card-main {
+	display: flex;
+	flex-direction: column;
+	width: 340px;
 }
 
 .cc_card-name {
@@ -57,7 +74,7 @@
 }
 
 .cc_card-name div a h2 {
-	font-size: 32px;
+	font-size: 24px;
 }
 
 .cc_card-name p {
@@ -74,19 +91,19 @@
 }
 
 #bitcoin-chart {
-	margin: 15px 25px;
-	max-width: 360px;
-  max-height: 180px;
+	margin: 5px;
+	max-width: 200px;
+  max-height: 100px;
 }
 
 .cc_card-activity {
 	padding: 20px;
-	border-top: 1px solid rgba(255, 255, 255, 0.125);
+	border-left: 1px solid rgba(255, 255, 255, 0.125);
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	border-radius: 0 0 12px 12px;
-	background-image: radial-gradient(at 10% 80%, rgba(247, 148, 26, 0.4), transparent 80%);
+	flex-direction: column;
+	justify-content: space-around;
+	/* border-radius: 0 0 12px 12px; */
+	/* background-image: radial-gradient(at 10% 80%, rgba(247, 148, 26, 0.4), transparent 80%); */
 }
 
 .cc_card-activity div {
@@ -97,7 +114,7 @@
 }
 
 .cc_card-price {
-	font-size: 30px;
+	font-size: 24px;
 }
 
 .cc_card-subtitle {

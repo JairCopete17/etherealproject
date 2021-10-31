@@ -4,10 +4,11 @@ header {
 	align-items: center;
 	top: 0;
 	left: 0;
-	padding: 50px 15vw;
 	height: 100px;
-	width: 100%;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	/* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
 }
 
 #logo {

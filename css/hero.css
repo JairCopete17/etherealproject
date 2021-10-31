@@ -1,13 +1,57 @@
 .hero {
 	left: 0;
 	width: 100%;
-	min-height: 60vh;
-	padding: 0 10vw;
-	background-color: #18191d;
+	height: 500px;
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color: transparent;
 	color: #fff;
 }
 
-#status {
-	padding: 20px;
-	padding-left: 0;
+.hero_box {
+  position: relative;
+	left: -40px;
+  perspective: 1200px;
+}
+
+.hero_box-img {
+	transform: rotate3d(0.5, -1, 0, -10deg);
+	animation: floating 5s infinite;
+}
+
+.hero-image {
+  display: block;
+  width: 700px;
+}
+
+.hero-title {
+	z-index: 1;
+	font-family: 'Poppins';
+	font-size: 66px;
+	text-align: right;
+	position: relative;
+	width: 550px;
+	top: -350px;
+	left: 660px;
+}
+
+.text-gradient {
+	background-image: url(../images/horizontal-gradient.gif);
+	background-size: cover;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: default;
+	transition: all ease-in-out 0.6s;
+}
+
+@keyframes floating {
+  0%, 100% {
+		transform: translateY(0) rotate3d(0.5, -1, 0, -10deg);
+  }
+  50% {
+		transform: translateY(5%) rotate3d(0.5, -1, 0, -10deg);
+  }
 }
