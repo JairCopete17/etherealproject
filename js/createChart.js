@@ -56,3 +56,5 @@ const createTokenChart = async (token, gradientR, gradientG, gradientB) => {
 }
 
 createTokenChart('bitcoin',247,147,26)
+createTokenChart('ethereum',183,208,248)
+createTokenChart('solana',20,241,149)

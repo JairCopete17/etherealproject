@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" src="main.js"></script>
-    <script type="module" src="js/createChart.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/createChart.js"></script>
   </head>
   <body>
     <header>
@@ -39,36 +39,98 @@
       <h1 class="hero-title">Inicia tu camino al <span class="text-gradient">Metaverso</span></h1>
     </section>
     <section class="cards">
+      <h1 class="cards-title">Conoce los tokens mas influyentes en el mercado</h1>
       <section class="cryptocurrencies">
-        <h2 class="card-title">Cryptocurrencies</h2>
-        <article class="cc_card">
-          <div class="cc_card-main">
-            <div class="cc_card-name">
-              <div>
-                <img src="" alt="Bitcoin's logo" id="bitcoin-image">
-                <a href="" id="bitcoin-link"><h2>Bitcoin</h2></a>
+        <h2 class="tokens-title">Cryptocurrencies</h2>
+        <section class="tokens-cards">
+          <article class="cc_card">
+            <div class="cc_card-main">
+              <div class="cc_card-name">
+                <div>
+                  <img src="" alt="Bitcoin's logo" id="bitcoin-image">
+                  <a href="" id="bitcoin-link"><h2>Bitcoin</h2></a>
+                </div>
+                <p id="bitcoin-id">BTC</p>
               </div>
-              <p id="bitcoin-id">BTC</p>
+              <div class="cc_card-chart">
+                <canvas id="bitcoin-chart" class="cc_card-basic-chart"></canvas>
+              </div>
             </div>
-            <div class="cc_card-chart">
-              <canvas id="bitcoin-chart" class="cc_card-basic-chart"></canvas>
+            <div class="cc_card-activity">
+              <div>
+                <p class="cc_card-subtitle">Marketcap</p>
+                <p class="cc_card-price" id="bitcoin-marketcap"></p>
+              </div>
+              <div>
+                <p class="cc_card-subtitle">Price</p>
+                <p class="cc_card-price" id="bitcoin-price"></p>
+              </div>
+              <div>
+                <p class="cc_card-subtitle">24h %</p>
+                <p id="bitcoin-change"></p>
+              </div>
             </div>
-          </div>
-          <div class="cc_card-activity">
-            <div>
-              <p class="cc_card-subtitle">Price</p>
-              <p class="cc_card-price" id="bitcoin-price"></p>
+          </article>
+          <article class="cc_card" id="eth-card">
+            <div class="cc_card-main">
+              <div class="cc_card-name">
+                <div>
+                  <img src="" alt="Ethereum's logo" id="ethereum-image">
+                  <a href="" id="ethereum-link"><h2>Ethereum</h2></a>
+                </div>
+                <p id="ethereum-id">ETH</p>
+              </div>
+              <div class="cc_card-chart">
+                <canvas id="ethereum-chart" class="cc_card-basic-chart"></canvas>
+              </div>
             </div>
-            <div>
-              <p class="cc_card-subtitle">24h %</p>
-              <p id="bitcoin-change"></p>
+            <div class="cc_card-activity">
+              <div>
+                <p class="cc_card-subtitle">Marketcap</p>
+                <p class="cc_card-price" id="ethereum-marketcap"></p>
+              </div>
+              <div>
+                <p class="cc_card-subtitle">Price</p>
+                <p class="cc_card-price" id="ethereum-price"></p>
+              </div>
+              <div>
+                <p class="cc_card-subtitle">24h %</p>
+                <p id="ethereum-change"></p>
+              </div>
             </div>
-            <!-- <a href="" id="bitcoin-trade" target="_blank">Trade</a> -->
-          </div>
-        </article>
+          </article>
+          <article class="cc_card" id="sol-card">
+            <div class="cc_card-main" id="sol_card-main">
+              <div class="cc_card-name" id="sol_card-name">
+                <div>
+                  <img src="" alt="Solana's logo" id="solana-image">
+                  <a href="" id="solana-link"><h2>Solana</h2></a>
+                </div>
+                <p id="solana-id">SOL</p>
+              </div>
+              <div class="cc_card-chart" id="sol_card-chart">
+                <canvas id="solana-chart" class="cc_card-basic-chart"></canvas>
+              </div>
+            </div>
+            <div class="cc_card-activity" id="sol_card-activity">
+              <div>
+                <p class="cc_card-subtitle">Price</p>
+                <p class="cc_card-price" id="solana-price"></p>
+              </div>
+              <div>
+                <p class="cc_card-subtitle">24h %</p>
+                <p id="solana-change"></p>
+              </div>
+            </div>
+          </article>
+        </section>
       </section>
-      <section class="defi"></section>
-      <section class="nft"></section>
+      <section class="defi">
+        <h2 class="tokens-title">DeFi</h2>
+      </section>
+      <section class="nft">
+        <h2 class="tokens-title">NFT</h2>
+      </section>
     </section>
   </body>
 </html>

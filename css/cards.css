@@ -1,29 +1,47 @@
 .cards {
 	width: 100%;
 	min-height: 20vh;
+	padding: 60px 0;
 	background-color: #18191d;
 	color: #fff;
 	display: flex;
 	flex-direction: column;
 }
 
-.cryptocurrencies {
+.cards-title {
+	display: flex;
+	align-items: center;
+	width: 1200px;
+	padding: 15px 0;
+	margin-right: auto;
+	margin-left: auto;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.125);
+	font-size: 36px;
+}
+
+.cryptocurrencies, .defi, .nft {
 	width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
+	padding: 20px 0;
 }
 
-.card-title {
+.tokens-title {
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
 
+.tokens-cards {
+	display: flex;
+	flex-direction: row;
+}
+
 .cc_card {
-	width: 500px;
-	height: 220px;
+	width: 480px;
+	height: 250px;
+	margin-right: 20px;
 	border: 1px solid rgba(255, 255, 255, 0.125);
 	border-radius: 12px;
-	/* margin: 0 20px; */
 	backdrop-filter: blur(16px) saturate(100%);
 	background-color: rgba(20, 20, 22, 0.75);
 	display: flex;
@@ -90,10 +108,10 @@
 	padding: 15px;
 }
 
-#bitcoin-chart {
+.cc_card-basic-chart {
 	margin: 5px;
-	max-width: 200px;
-  max-height: 100px;
+	max-width: 250px;
+  max-height: 150px;
 }
 
 .cc_card-activity {
@@ -123,21 +141,72 @@
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.cc_card-activity a {
-	width: 90px;
-	height: 40px;
-	border: 1px solid rgba(255, 255, 255, 0.6);
-	border-radius: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	text-decoration: none;
-	color: rgba(255, 255, 255, 0.7);
+#eth-card:hover {
+	box-shadow: rgba(183,208,248,.1) 0px 20px 25px -5px, rgba(183,147,248,.04) 0px 10px 10px -5px;
 }
 
-.cc_card-activity a:hover {
-	border: 1px solid rgba(255, 255, 255,1);
-	color: #fff;
-	transition: all 0.3s;
+#eth-card div a:hover {
+	border-bottom: solid 1px rgb(183,208,248);
+}
+
+#sol-card {
+	width: 200px;
+	margin-right: 0;
+	flex-direction: column;
+}
+
+#sol-card:hover {
+	box-shadow: rgba(20,241,149,.1) 0px 20px 25px -5px, rgba(20,241,149,.04) 0px 10px 10px -5px;
+}
+
+#sol_card-main {
+	max-width: 200px;
+}
+
+#sol_card-name {
+	margin: 15px 5px;
+}
+
+#sol_card-name div {
+	margin-left: 5px;
+}
+
+#sol_card-name div img {
+	margin: 0 10px;
+}
+
+#sol-card div a:hover {
+	border-bottom: solid 1px rgb(20,241,149);
+}
+
+#sol_card-name p {
+	margin: 0 10px;
+}
+
+#sol_card-name div a h2 {
+	font-size: 20px;
+}
+
+#sol_card-chart {
+	padding: 5px;
+}
+
+#solana-chart {
+	max-width: 160px;
+	max-height: 80px;
+}
+
+#sol_card-activity {
+	padding: 15px;
+	border-left: none;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+#sol_card-activity div {
+	margin: 0 5px;
+}
+
+#solana-price {
+	font-size: 20px;
 }
