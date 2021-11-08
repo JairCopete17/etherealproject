@@ -2,6 +2,7 @@
 	width: 100%;
 	min-height: 20vh;
 	padding: 60px 0;
+	padding-bottom: 160px;
 	background-color: #18191d;
 	color: #fff;
 	display: flex;
@@ -120,8 +121,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	/* border-radius: 0 0 12px 12px; */
-	/* background-image: radial-gradient(at 10% 80%, rgba(247, 148, 26, 0.4), transparent 80%); */
+	/* border-radius: 0 0 12px 12px;
+	background-image: radial-gradient(at 10% 80%, rgba(247, 148, 26, 0.4), transparent 80%); */
 }
 
 .cc_card-activity div {
@@ -139,6 +140,20 @@
 	margin: 2px;
 	font-weight: 300;
 	color: rgba(255, 255, 255, 0.6);
+}
+
+.defi_card {
+	position: inherit;
+	width: 800px;
+	height: 400px;
+}
+
+.defi_card-chart {
+	position: relative;
+}
+
+.defi_card-basic-chart {
+	position: absolute;
 }
 
 #eth-card:hover {
@@ -226,4 +241,3 @@
 #cool-cat_card {
 	margin-right: 0;
 }
-

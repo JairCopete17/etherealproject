@@ -1,0 +1,44 @@
+.cta {
+	width: 1200px;
+	height: 250px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: -100px;
+}
+
+.cta-box {
+	width: 1000px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	background: linear-gradient(135deg, #252525 0%, #191919 100%);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.cta-box h2 {
+	color: #fff;
+	font-size: 36px;
+}
+
+.cta-box a {
+	padding: 25px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #18191d;
+	text-decoration: none;
+}
+
+.cta-box a:hover {
+	letter-spacing: 2px;
+	background: transparent;
+	transition: all 1.6s ease-out;
+}
+
+.cta-box a img {
+	height: 10px;
+	margin-left: 8px;
+}

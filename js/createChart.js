@@ -14,19 +14,19 @@ const createTokenChart = async (token, gradientR, gradientG, gradientB) => {
   gradient.addColorStop(.85, 'rgba(255,193,119,0)')
 
   const data = {
-      labels: times,
-      datasets: [{
-        backgroundColor: gradient,
-        borderCapStyle: 'round',
-        borderColor: `rgba(${gradientR},${gradientG},${gradientB},1)`,
-        borderJoinStyle: 'round',
-        borderWidth: 3,
-        data: prices,
-        fill: false,
-        label: 'USD$',
-        pointHitRadius: 10,
-        pointRadius: 0,
-        tension: .2,
+    labels: times,
+    datasets: [{
+      backgroundColor: gradient,
+      borderCapStyle: 'round',
+      borderColor: `rgba(${gradientR},${gradientG},${gradientB},1)`,
+      borderJoinStyle: 'round',
+      borderWidth: 3,
+      data: prices,
+      fill: false,
+      label: 'USD$',
+      pointHitRadius: 10,
+      pointRadius: 0,
+      tension: .2,
     }]
   }
 
@@ -58,3 +58,8 @@ const createTokenChart = async (token, gradientR, gradientG, gradientB) => {
 createTokenChart('bitcoin',247,147,26)
 createTokenChart('ethereum',183,208,248)
 createTokenChart('solana',20,241,149)
+
+createTokenChart('uniswap',244,6,119)
+createTokenChart('tezos',247,250,254)
+createTokenChart('chainlink',51,93,210)
+createTokenChart('aave',168,90,163)

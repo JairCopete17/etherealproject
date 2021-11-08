@@ -13,7 +13,7 @@
 
 .hero_box {
   position: relative;
-	left: -20px;
+	left: -10px;
   perspective: 1200px;
 }
 
@@ -35,7 +35,7 @@
 	position: relative;
 	width: 550px;
 	top: -350px;
-	left: 678px;
+	left: 650px;
 }
 
 .text-gradient {
