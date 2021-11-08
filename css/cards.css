@@ -31,7 +31,7 @@
 	margin-bottom: 30px;
 }
 
-.tokens-cards {
+.tokens-cards, .nft-cards {
 	display: flex;
 	flex-direction: row;
 }
@@ -210,3 +210,20 @@
 #solana-price {
 	font-size: 20px;
 }
+
+.nft_card {
+	margin-right: 16px;
+
+}
+
+.nft_card img {
+	margin: 10px 0;
+	border-radius: 8px;
+	width: 288px;
+	height: 288px;
+}
+
+#cool-cat_card {
+	margin-right: 0;
+}
+
