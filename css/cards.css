@@ -228,7 +228,6 @@
 
 .nft_card {
 	margin-right: 16px;
-
 }
 
 .nft_card img {
@@ -236,8 +235,21 @@
 	border-radius: 8px;
 	width: 288px;
 	height: 288px;
+	animation: dancing 2s infinite;
 }
 
 #cool-cat_card {
 	margin-right: 0;
+}
+
+@keyframes dancing {
+  0%, 100% {
+		transform: rotate3d(1, 1, 0, 0deg);
+  }
+	40% {
+		transform: rotate3d(1, 1, 0, -5deg);
+  }
+  80% {
+		transform: rotate3d(-1, 1, 0, -5deg);
+  }
 }

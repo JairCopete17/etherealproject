@@ -28,7 +28,12 @@ footer article input[type=email] {
 	padding-left: 8px;
 	background-color: #202020;
 	border-color: #252525;
+	color: #8e8f90;
+}
+
+footer article input[type=email]:hover {
 	color: #fff;
+	transition: all 0.3s;
 }
 
 footer article input[type=submit] {
@@ -36,9 +41,14 @@ footer article input[type=submit] {
 	height: 50px;
 	background-color: #202020;
 	border-color: #252525;
-	color: #fff;
+	color: #8e8f90;
   border: none;
 	cursor: pointer;
+}
+
+footer article input[type=submit]:hover {
+	color: #fff;
+	transition: all 0.3s;
 }
 
 footer ul {

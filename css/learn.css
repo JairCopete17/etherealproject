@@ -1,0 +1,182 @@
+.learn {
+	width: 100%;
+	height: 780px;
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: transparent;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 30px 50px repeat(4, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+
+.learn > h2 {
+	color: #8e8f90;
+	grid-area: 1 / 1 / 2 / 6;
+}
+
+.learn > p {
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 0;
+	grid-area: 2 / 1 / 3 / 6;
+}
+
+.learn-card {
+	width: 400px;
+	height: 655px;
+	background-color: #202020;
+	border-radius: 12px;
+	padding: 20px;
+	color: #fff;
+}
+
+.learn-card:hover {
+	background: linear-gradient(165deg, #061700  0%, #5ed5ab 100%);
+	color: #000;
+	transform: scale(1.05);
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+	transition: all 0.6s ease-out;
+}
+
+.stretch article {
+	position: relative;
+	top: 50px;
+}
+
+.wide, .wider {
+	width: 720px;
+	height: 300px;
+}
+
+.stretch {
+	grid-area: 3 / 1 / 7 / 3;
+}
+
+.wide {
+	grid-area: 3 / 3 / 5 / 6;
+}
+
+.wider {
+	grid-area: 5 / 3 / 7 / 6;
+}
+
+.learn-card_subtitle {
+	color: #8e8f90;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.learn-card_title {
+	color: inherit;
+	font-size: 40px;
+}
+
+.learn-card_text {
+	color: inherit;
+	font-size: 16px;
+	padding: 5px 20px 5px 0;
+	text-align: left;
+}
+
+.learn-card_link {
+	position: absolute;
+	color: inherit;
+	text-decoration: none;
+	font-size: 14px;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.learn-card_link:hover {
+	text-decoration: underline;
+	transition: all 0.3s;
+}
+
+.learn-card_link img {
+	width: 14px;
+	filter: invert(1);
+	margin-left: 8px;
+}
+
+.learn-card:hover .learn-card_link img {
+	filter: invert(0);
+	transition: all 0.6s ease-out;
+}
+
+.coin-stack {
+	display: flex;
+	flex-direction: column;
+	width: 220px;
+	height: 300px;
+	position: relative;
+	top: 20px;
+	left: -20px;
+}
+
+.coin-stack-first {
+	z-index: 5;
+}
+
+.coin-stack-second {
+	position: relative;
+	top: -70px;
+	left: -16px;
+	z-index: 4;
+}
+
+.coin-stack-third {
+	position: relative;
+	top: -140px;
+	left: 5px;
+	z-index: 3;
+}
+
+.coin-stack-fourth {
+	position: relative;
+	top: -210px;
+	left: -12px;
+	z-index: 2;
+}
+
+.coin-stack-fifth {
+	position: relative;
+	top: -280px;
+	z-index: 1;
+}
+
+.coin-stack-special {
+	position: relative;
+	width: 220px;
+	top: -420px;
+	left: 158px;
+	rotate: 76deg;
+	z-index: 5;
+}
+
+.planet {
+	width: 240px;
+	position: relative;
+	left: 500px;
+	top: -100px;
+}
+
+.wide article {
+	position: relative;
+	top: -130px;
+}
+
+.planet-graph {
+	width: 200px;
+	position: relative;
+	left: 500px;
+	top: -100px;
+}
+
+.wider article {
+	position: relative;
+	top: -150px;
+}
