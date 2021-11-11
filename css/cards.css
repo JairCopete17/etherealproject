@@ -142,20 +142,6 @@
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.defi_card {
-	position: inherit;
-	width: 800px;
-	height: 400px;
-}
-
-.defi_card-chart {
-	position: relative;
-}
-
-.defi_card-basic-chart {
-	position: absolute;
-}
-
 #eth-card:hover {
 	box-shadow: rgba(183,208,248,.1) 0px 20px 25px -5px, rgba(183,147,248,.04) 0px 10px 10px -5px;
 }
@@ -224,6 +210,91 @@
 
 #solana-price {
 	font-size: 20px;
+}
+
+.defi-box {
+	display: flex;
+	flex-direction: row;
+}
+
+.defi_card {
+	position: inherit;
+	width: 860px;
+	height: 430px;
+	padding: 20px 0;
+}
+
+.defi_card-chart {
+	position: relative;
+}
+
+.defi_card-basic-chart {
+	position: absolute;
+}
+
+.defi-cc_cards {
+	display: flex;
+	flex-direction: column;
+}
+
+.defi-cc_card {
+	display: flex;
+	flex-direction: column;
+	width: 310px;
+	height: 90px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	background-color: rgba(20, 20, 22, 0.75);
+	border-radius: 12px;
+}
+
+.defi-cc_card div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.defi-cc_card div a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.9);
+	padding: 1px;
+	margin: 0 15px;
+}
+
+.defi-cc_card div a:hover {
+	color: rgba(255, 255, 255, 1);
+	border-bottom: solid 1px rgb(255,217,82);
+	transition: all 0.3s;
+}
+
+#uniswap-link:hover {
+	border-bottom: solid 1px rgb(244,6,119);
+}
+
+#chainlink-link:hover {
+	border-bottom: solid 1px rgb(51,93,210);
+}
+
+#thorchain-link:hover {
+	border-bottom: solid 1px rgb(0,242,177);
+}
+
+#pancakeswap-link:hover {
+	border-bottom: solid 1px rgb(209,136,79);
+}
+
+.defi-cc_card-activity {
+	margin: 5px 0;
+}
+
+.defi-cc_card-price {
+	font-size: 24px;
+	margin: 0 20px;
+}
+
+.defi-cc_card-change {
+	margin: 0 10px;
 }
 
 .nft_card {

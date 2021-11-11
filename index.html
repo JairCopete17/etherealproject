@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/createChart.js"></script>
+    <script type="module" src="./js/createMultipleChart.js"></script>
   </head>
   <body>
     <header>
@@ -127,13 +128,74 @@
       </section>
       <section class="defi">
         <h2 class="tokens-title">DeFi</h2>
-        <article class="defi_card">
-          <div class="defi_card-chart">
-            <canvas id="uniswap-chart" class="defi_card-basic-chart"></canvas>
-            <canvas id="tezos-chart" class="defi_card-basic-chart"></canvas>
-            <canvas id="chainlink-chart" class="defi_card-basic-chart"></canvas>
-            <canvas id="aave-chart" class="defi_card-basic-chart"></canvas>
-          </div>
+        <article class="defi-box">
+          <article class="defi_card">
+            <div class="defi_card-chart">
+              <canvas id="defi-chart" class="defi_card-basic-chart"></canvas>
+            </div>
+          </article>
+          <article class="defi-cc_cards">
+            <article class="defi-cc_card">
+              <div>
+                <img src="" alt="Terra's logo" id="terra-image">
+                <a href="" id="terra-link"><h2>Terra</h2></a>
+              </div>
+              <div class="defi-cc_card-activity">
+                <p class="cc_card-subtitle">Price</p>
+                <p class="defi-cc_card-price" id="terra-price"></p>
+                <p class="cc_card-subtitle">24h %</p>
+                <p class="defi-cc_card-change" id="terra-change"></p>
+              </div>
+            </article>
+            <article class="defi-cc_card">
+              <div>
+                <img src="" alt="Uniswap's logo" id="uniswap-image">
+                <a href="" id="uniswap-link"><h2>Uniswap</h2></a>
+              </div>
+              <div class="defi-cc_card-activity">
+                <p class="cc_card-subtitle">Price</p>
+                <p class="defi-cc_card-price" id="uniswap-price"></p>
+                <p class="cc_card-subtitle">24h %</p>
+                <p class="defi-cc_card-change" id="uniswap-change"></p>
+              </div>
+            </article>
+            <article class="defi-cc_card">
+              <div>
+                <img src="" alt="Chainlink's logo" id="chainlink-image">
+                <a href="" id="chainlink-link"><h2>Chainlink</h2></a>
+              </div>
+              <div class="defi-cc_card-activity">
+                <p class="cc_card-subtitle">Price</p>
+                <p class="defi-cc_card-price" id="chainlink-price"></p>
+                <p class="cc_card-subtitle">24h %</p>
+                <p class="defi-cc_card-change" id="chainlink-change"></p>
+              </div>
+            </article>
+            <article class="defi-cc_card">
+              <div>
+                <img src="" alt="PancakeSwap's logo" id="pancakeswap-image">
+                <a href="" id="pancakeswap-link"><h2>PancakeSwap</h2></a>
+              </div>
+              <div class="defi-cc_card-activity">
+                <p class="cc_card-subtitle">Price</p>
+                <p class="defi-cc_card-price" id="pancakeswap-price"></p>
+                <p class="cc_card-subtitle">24h %</p>
+                <p class="defi-cc_card-change" id="pancakeswap-change"></p>
+              </div>
+            </article>
+            <article class="defi-cc_card">
+              <div>
+                <img src="" alt="THORChain's logo" id="thorchain-image">
+                <a href="" id="thorchain-link"><h2>THORChain</h2></a>
+              </div>
+              <div class="defi-cc_card-activity">
+                <p class="cc_card-subtitle">Price</p>
+                <p class="defi-cc_card-price" id="thorchain-price"></p>
+                <p class="cc_card-subtitle">24h %</p>
+                <p class="defi-cc_card-change" id="thorchain-change"></p>
+              </div>
+            </article>
+          </article>
         </article>
       </section>
       <section class="nft">

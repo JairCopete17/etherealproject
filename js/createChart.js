@@ -58,8 +58,3 @@ const createTokenChart = async (token, gradientR, gradientG, gradientB) => {
 createTokenChart('bitcoin',247,147,26)
 createTokenChart('ethereum',183,208,248)
 createTokenChart('solana',20,241,149)
-
-createTokenChart('uniswap',244,6,119)
-createTokenChart('tezos',247,250,254)
-createTokenChart('chainlink',51,93,210)
-createTokenChart('aave',168,90,163)
