@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./images/logo.webp" />
@@ -19,7 +18,7 @@
       <img src="./images/logo.webp" alt="Logo" id="logo">
       <nav>
         <ul class="header-pages">
-          <li><a href="#">Market</a></li>
+          <li><a href="./index.php">Home</a></li>
           <li><a href="#">Discover</a></li>
           <li><a href="./pages/learn/learn.html">Learn</a></li>
         </ul>
@@ -32,16 +31,32 @@
               <article id="signin" class="sign-in">
                 <div class="sign-in_box">
                   <a href="#" class="sign-in_close">X</a>
+                  <?php
+                  if(isset($_REQUEST['Login'])) {
+                    include('./php/opendb.php');
+                    $email = $_REQUEST['signin-email'];
+                    $code = $_REQUEST['signin-code'];
+                    $readregistro = "SELECT * from usuarios WHERE email = '$email' AND id = '$code'";
+                    $response = $db -> query($readregistro);
+                    $emailfetch = $response -> fetch_array();
+
+                    if ($emailfetch == "") { echo "<h3>Verifica tus datos para ingresar a Ethereal.</h3>"; }
+                    else if ($emailfetch['admin'] == 1) { header("Location: ./php/admin/admin.php"); }
+                    else if ($emailfetch['admin'] == 0) { header("Location: ./php/buy/buy.php"); }
+
+                    include('./php/closedb.php');
+                  }
+                  ?>
                   <h2>Inicia sesión en Ethereal</h2>
                   <p>Para verificar tu sesión, será necesario que hayas recibido tu codigo de invitado.</p>
                   <form action="" method="post" class="sign-in_form">
                     <label for="signin-email">Correo</label>
                     <input type="email" name="signin-email" placeholder="Digite su correo electronico" required>
                     <label for="">Codigo de invitación</label>
-                    <input type="number" name="signin-code" placeholder="888666999" required>
-                    <input type="submit" value="Inicia sesión">
+                    <input type="number" name="signin-code" placeholder="888" required>
+                    <input type="submit" name="Login" value="Inicia sesión">
                   </form>
-                  <form action="" method="post" class="sign-in_lostpass">
+                  <form action="./php/recover_password/recover_password.php" method="post" class="sign-in_lostpass">
                     <input type="submit" value="¿Olvidaste tu contraseña?">
                   </form>
                 </div>
@@ -322,7 +337,7 @@
         </form>
       </article>
       <ul>
-        <li><a href="index.html">Ethereal</a></li>
+        <li><a href="index.php">Ethereal</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Learn</a></li>
         <li><a href="#">Build</a></li>
@@ -339,9 +354,6 @@
           <p>La información fue provista por</p>
           <img src="./images/coingecko.svg" alt="CoinGecko Logo" class="coingecko-logo">
         </article>
-      </article>
-      <article>
-        <p>© 2021 No rights reserved. Actually, share, steal (like a pro) and get inspiration as much as you want. We live in a free world. 🌎</p>
       </article>
     </footer>
   </body>
