@@ -24,10 +24,29 @@
           <li><a href="./pages/learn/learn.html">Learn</a></li>
         </ul>
         <ul class="header-control">
-          <li class="header-control_portfolio"><a href="#"><img src="./images/Work.svg" alt="Portfolio" class="header-control_icons">Portfolio</a></li>
           <li><a href="#"><img src="./images/Notification.svg" alt="Notifications" class="header-control_icons"></a></li>
           <li><a href="#"><img src="./images/Setting.svg" alt="Theme selector" class="header-control_icons"></a></li>
-          <li><a href="#"><img src="./images/Profile.svg" alt="Profile" class="header-control_icons"></a></li>
+          <li class="header-control_special"><a href="#"><img src="./images/Work.svg" alt="Portfolio" class="header-control_icons">Portfolio</a></li>
+          <li class="header-control_special">
+            <a href="#signin"><img src="./images/Profile.svg" alt="Profile" class="header-control_icons">Iniciar sesión</a>
+              <article id="signin" class="sign-in">
+                <div class="sign-in_box">
+                  <a href="#" class="sign-in_close">X</a>
+                  <h2>Inicia sesión en Ethereal</h2>
+                  <p>Para verificar tu sesión, será necesario que hayas recibido tu codigo de invitado.</p>
+                  <form action="" method="post" class="sign-in_form">
+                    <label for="signin-email">Correo</label>
+                    <input type="email" name="signin-email" placeholder="Digite su correo electronico" required>
+                    <label for="">Codigo de invitación</label>
+                    <input type="number" name="signin-code" placeholder="888666999" required>
+                    <input type="submit" value="Inicia sesión">
+                  </form>
+                  <form action="" method="post" class="sign-in_lostpass">
+                    <input type="submit" value="¿Olvidaste tu contraseña?">
+                  </form>
+                </div>
+              </article>
+          </li>
         </ul>
       </nav>
     </header>

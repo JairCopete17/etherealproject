@@ -36,13 +36,13 @@ header nav ul li:hover {
 	transition: all 0.3s;
 }
 
-header nav ul li a {
+header nav ul li > a {
 	margin: 0 15px;
 	text-decoration: none;
 	color: #8e8f90;
 }
 
-header nav ul li a:hover {
+header nav ul li > a:hover {
 	color: #fff;
 	transition: color 0.3s;
 }
@@ -56,17 +56,17 @@ header nav ul li a:hover {
 	filter: invert(1);
 }
 
-.header-control_portfolio {
+.header-control_special {
 	padding: 3px;
 }
 
-.header-control_portfolio a {
+.header-control_special > a {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
 
-.header-control_portfolio img {
+.header-control_special img {
 	padding-right: 15px;
 }
