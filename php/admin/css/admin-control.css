@@ -1,0 +1,183 @@
+.control_dashboard {
+	width: 1200px;
+	height: fit-content;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px 0;
+}
+
+.control_dashboard h1 {
+	font-size: 32px;
+	color: #fff;
+	padding-bottom: 30px;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.125);
+}
+
+.control-form {
+	margin: 30px 0;
+}
+
+.control-form form {
+	width: 100%;
+  text-align: center;
+	color: #fff;
+}
+
+.control-form form .control-form_inputs {
+	width: 100%;
+	padding: 10px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.control-form form .control-form_inputs article input {
+	margin: 10px 5px;
+	padding-left: 8px;
+	background-color: #202020;
+	border-color: #252525;
+	color: #8e8f90;
+}
+
+.control-form form .control-form_inputs article input:hover {
+	color: #fff;
+	transition: all 0.3s;
+}
+
+.inp_id, .inp_admin {
+	width: 50px;
+	height: 40px;
+	-moz-appearance: textfield; /*Add webkit tools*/
+}
+
+.inp_nombre {
+	width: 100px;
+	height: 40px;
+}
+
+.inp_apellido {
+	width: 150px;
+	height: 40px;
+}
+
+.inp_email {
+	width: 200px;
+	height: 40px;
+}
+
+.inp_direccion {
+	width: 200px;
+	height: 40px;
+}
+
+.inp_telefono {
+	width: 100px;
+	height: 40px;
+	-moz-appearance: textfield;
+}
+
+.inp_btc-address {
+	width: 250px;
+	height: 40px;
+}
+
+.control-form form .control-form_actions {
+	width: 100%;
+	padding: 10px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.control-form form .control-form_actions article:last-child {
+	padding-left: 45px;
+	border-left: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.submitcrud {
+	width: 100px;
+	height: 40px;
+	margin: 5px 10px;
+	background-color: #202020;
+	border-color: #252525;
+	color: #8e8f90;
+}
+
+.searchcrud {
+	width: 200px;
+	height: 40px;
+	margin: 5px 10px;
+	background-color: #202020;
+	border-color: #252525;
+	color: #8e8f90;
+}
+
+.submitcrud:hover, .searchcrud:hover {
+	color: #fff;
+	transition: all 0.3s;
+}
+
+.error {
+	margin: 10px 0;
+	padding: 10px;
+	width: 100%;
+	border-radius: 12px;
+	border: 1px solid #e15241;
+	background-color: rgba(225, 82, 6, .1);
+	color: #e15241;
+}
+
+.ok {
+	margin: 10px 0;
+	padding: 10px;
+	width: 100%;
+	border-radius: 12px;
+	border: 1px solid #4eaf0a;
+	background-color: rgba(78, 175, 10, .1);
+	color: #4eaf0a;
+}
+
+.control-table {
+	overflow-y: auto;
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: solid 1px rgba(255, 255, 255, 0.125);
+}
+
+.datatable {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.datatable th, .datatable td {
+  padding: 20px 5px;
+}
+
+.datatable th {
+	font-size: 9px;
+}
+
+.datatable td {
+	font-size: 12px;
+}
+
+.thead-row {
+	color: #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+}
+
+.user-row {
+	color: #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+.user-row:hover {
+  background-color: rgba(255, 255, 255,0.125);
+}
+
+.user-row:last-child {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+}
+

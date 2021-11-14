@@ -1,5 +1,6 @@
 @import url(../../../css/header.css);
 @import url(../../../css/footer.css);
+@import url(./admin-control.css);
 
 * {
 	margin: 0;
