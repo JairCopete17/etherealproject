@@ -1,6 +1,7 @@
 @import url(header.css);
-@import url(hero.css);
 @import url(signin.css);
+@import url(signup.css);
+@import url(hero.css);
 @import url(cards.css);
 @import url(cta.css);
 @import url(learn.css);

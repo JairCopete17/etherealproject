@@ -38,19 +38,6 @@
 	left: 650px;
 }
 
-.hero-title span {
-	z-index: 1;
-}
-
-.text-gradient {
-	background-image: url(../images/horizontal-gradient.gif);
-	background-size: cover;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: default;
-}
-
 @keyframes floating {
   0%, 100% {
 		transform: translateY(0) rotate3d(0.5, -1, 0, -10deg);

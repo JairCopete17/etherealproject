@@ -8,11 +8,17 @@ header {
 	width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
-	/* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
 }
 
 #logo {
 	width: 80px;
+}
+
+.header-title {
+	color: #e4e4e4;
+	text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	margin: 0 25px;
+	cursor: default;
 }
 
 header nav {
@@ -32,7 +38,8 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-	margin-bottom: 3px;
+	position: relative;
+	top: -2px;
 	transition: all 0.3s;
 }
 
@@ -42,7 +49,8 @@ header nav ul li > a {
 	color: #8e8f90;
 }
 
-header nav ul li > a:hover {
+
+li:hover .header_titles {
 	color: #fff;
 	transition: color 0.3s;
 }
@@ -57,7 +65,13 @@ header nav ul li > a:hover {
 }
 
 .header-control_special {
-	padding: 3px;
+	padding: 12px;
+	margin: 0 8px;
+	border-radius: 18px;
+}
+
+.header-control_special:last-child {
+	background: linear-gradient(90deg, #3494e6 0%, #ec6ead 100%);
 }
 
 .header-control_special > a {
@@ -68,5 +82,5 @@ header nav ul li > a:hover {
 }
 
 .header-control_special img {
-	padding-right: 15px;
+	padding-right: 10px;
 }
