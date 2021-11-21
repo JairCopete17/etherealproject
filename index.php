@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
@@ -39,9 +41,13 @@
 									$response = $db -> query($readregistro);
 									$emailfetch = $response -> fetch_array();
 
+									$_SESSION["userid"] = $emailfetch['id'];
+									$_SESSION["username"] = $emailfetch['nombre'];
+									$_SESSION["userlastname"] = $emailfetch['apellido'];
+
 									if ($emailfetch == "") { echo "<h3 class="."sign-in_alert".">Verifica tus datos para ingresar a Ethereal.</h3>"; }
 									else if ($emailfetch['admin'] == 1) { header("Location: ./php/admin/admin.php"); }
-									else if ($emailfetch['admin'] == 0) { header("Location: ./php/buy/buy.php"); }
+									else if ($emailfetch['admin'] == 0) { header("Location: ./php/client/buy.php"); }
 
 									include('./php/closedb.php');
 								}

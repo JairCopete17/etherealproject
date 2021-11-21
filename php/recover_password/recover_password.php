@@ -28,7 +28,7 @@
     </header>
 		<section class="recoverpassword-box">
 			<h1>Recupera tu codigo de invitación</h1>
-			<p>Si tu correo electronico está vinculado a un codigo en nuestra base de datos, podrás acceder de nuestro a la plataforma de Ethereal.</p>
+			<p>Si tu correo electronico está vinculado a un codigo en nuestra base de datos, podrás acceder de nuevo a la plataforma de Ethereal.</p>
 			<form action="./recover_password.php" method="POST">
 					<input type="email" name="rp_email" placeholder="Digite su correo electronico">
 					<input type="submit" name="Recover" value="Recuperar">

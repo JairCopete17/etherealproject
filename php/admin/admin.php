@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -14,20 +16,18 @@
       <img src="../../images/logo.webp" alt="Logo" id="logo">
       <nav>
         <ul class="header-pages">
-					<li><a href="../../index.php">Home</a></li>
-          <li><a href="#">Discover</a></li>
-          <li><a href="./pages/learn/learn.html">Learn</a></li>
+					<li><a href="../../index.php"  class="header_titles">Home</a></li>
+          <li><a href="../../pages/news/news.html" class="header_titles">News</a></li>
+          <li><a href="../../pages/learn/learn.html" class="header_titles">Learn</a></li>
+          <li><a href="../../pages/portfolio/portfolio.html" class="header_titles">Portfolio</a></li>
         </ul>
         <ul class="header-control">
-          <li><a href="#"><img src="../../images/Notification.svg" alt="Notifications" class="header-control_icons"></a></li>
-          <li><a href="#"><img src="../../images/Setting.svg" alt="Theme selector" class="header-control_icons"></a></li>
-          <li class="header-control_special"><a href="#"><img src="../../images/Work.svg" alt="Portfolio" class="header-control_icons">Portfolio</a></li>
           <li class="header-control_special"><a href="#"><img src="../../images/Profile.svg" alt="Profile" class="header-control_icons"></a></li>
         </ul>
       </nav>
     </header>
 		<section class="control_dashboard">
-      <h1>Bienvenido, administrador.</h1>
+      <?php echo "<h1>Bienvenido, " . $_SESSION['username'] .".</h1>"; ?>
       <article class="control-form">
       <form action="./admin.php" method="POST">
         <section class="control-form_inputs">
