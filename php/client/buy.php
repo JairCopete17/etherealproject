@@ -55,7 +55,7 @@
           <option value="BTC">Bitcoin</option>
           <option value="ETH">Ethereum</option>
           <option value="PSE">PSE</option>
-          <option value="visa">Visa</option>
+          <option value="Visa">Visa</option>
           <option value="Mastercard">Mastercard</option>
         </select>
       </section>

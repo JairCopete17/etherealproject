@@ -1,0 +1,111 @@
+.order-historial {
+	z-index: 5;
+  background-color: rgba(0, 0, 0, 0.75);
+	color: #fff;
+	text-align: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .6s;
+}
+
+.order-historial_box {
+	z-index: 5;
+  background-color: #18191d;
+	position: relative;
+  width: 1000px;
+	height: 600px;
+  padding: 10px 20px;
+  margin: 100px auto;
+}
+
+#orderhistorial:target {
+	z-index: 5;
+	height: 100vh;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.order-historial_close, .order-historial_box h2, .order-historial_box div {
+	position: absolute;
+}
+
+.order-historial_close {
+	width: 950px;
+	margin: 20px 0;
+	text-align: right;
+	text-decoration: none;
+	color: #8e8f90;
+}
+
+.order-historial_close:hover {
+	color: #fff;
+	transition: color 0.3s;
+}
+
+.sign-in_alert {
+	position: absolute;
+	width: fit-content;
+	margin: 10px 20px;
+	padding: 12px;
+	border-radius: 12px;
+	border: 1px solid #e15241;
+	background-color: rgba(225, 82, 6, .1);
+	color: #e15241;
+	font-size: 12px;
+}
+
+.order-historial_box h2 {
+	font-size: 32px;
+	margin: 80px 0;
+	padding: 0 20px;
+}
+
+.order-historial_box div {
+	width: 800px;
+	font-size: 16px;
+	margin: 140px 0;
+	padding: 10px 60px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.historialcrud {
+	width: 200px;
+	height: 40px;
+	margin: 5px 10px;
+	background-color: #202020;
+	border-color: #252525;
+	color: #8e8f90;
+	cursor: pointer;
+}
+
+.historialcrud:hover {
+	color: #fff;
+	transition: all 0.3s;
+}
+
+.historialdatatable {
+	margin: 220px 0;
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.historialdatatable th, .historialdatatable td {
+  padding: 20px 5px;
+}
+
+.historialdatatable th {
+	font-size: 9px;
+}
+
+.historialdatatable td {
+	font-size: 12px;
+}

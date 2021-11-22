@@ -29,7 +29,7 @@
 		<section class="control_dashboard">
       <?php echo "<h1>Bienvenido, " . $_SESSION['username'] .".</h1>"; ?>
       <article class="control-form">
-      <form action="./admin.php" method="POST">
+      <form id="admincrud-form" action="./admin.php" method="POST">
         <section class="control-form_inputs">
         <article>
           <label for="id">Id</label>
@@ -85,8 +85,75 @@
             <input type="search" name="inp_busqparticular" class="searchcrud">
             <input type="submit" name="Search" value="Search" class="submitcrud">
           </article>
+          <article>
+            <a href="#orderhistorial"><input type="button" class="orderhistorialcrud" value="Consulta ordenes"></a>
+              <article id="orderhistorial" class="order-historial">
+                <div class="order-historial_box">
+                  <a href="#" class="order-historial_close">X</a>
+                  <h2>Historial de ordenes</h2>
+                  <div>
+                    <p>Buscar por:</p>
+                    <select form="order-form" name="orderselect" class="submitcrud">
+                      <option value="id">ID</option>
+                      <option value="BTC">Bitcoin</option>
+                      <option value="ETH">Ethereum</option>
+                      <option value="PSE">PSE</option>
+                      <option value="Visa">Visa</option>
+                      <option value="Mastercard">Mastercard</option>
+                    </select>
+                    <input type="search" form="order-form" name="idsearch" class="searchcrud">
+                    <input type="submit" form="order-form" name="Historial" value="Check" class="historialcrud">
+                  </div>
+                  <?php
+                  if(isset($_REQUEST['Historial'])) {
+                    include('../opendb.php');
+                    $seleccion = $_REQUEST['orderselect'];
+                    $busqueda = $_REQUEST['idsearch'];
+
+                    $searchregistro = "SELECT * from ordenes WHERE metodo = '$seleccion' ORDER BY orderid ASC";
+                    if ($seleccion == 'id') { $searchregistro = "SELECT * from ordenes WHERE userid = '$busqueda' ORDER BY orderid ASC"; }
+                    $response = $db -> query($searchregistro);
+
+                    echo "
+                    <table class=" . "historialdatatable" . ">
+                    <thead>
+                      <tr class=" . "thead-row" . ">
+                        <th>OrderID</th>
+                        <th>UserID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Metodo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    ";
+
+                    while ($orderfetch = $response -> fetch_array()) {
+                      echo "
+                        <tr class="."user-row".">
+                          <td>" . $orderfetch['orderid'] . "</td>
+                          <td>" . $orderfetch['userid'] . "</td>
+                          <td>" . $orderfetch['nombre'] . "</td>
+                          <td>" . $orderfetch['apellido'] . "</td>
+                          <td>" . $orderfetch['producto'] . "</td>
+                          <td>" . $orderfetch['cantidad'] . "</td>
+                          <td>" . $orderfetch['metodo'] . "</td>
+                        </tr>
+                      ";
+                    }
+                    echo "</tbody></table>";
+
+                    include('../closedb.php');
+                  }
+                  ?>
+                </div>
+              </article>
+          </article>
         </section>
       </form>
+      <form id="order-form" action="./admin.php#orderhistorial" method="POST"></form>
       </article>
       <article class="control-table">
         <?php
