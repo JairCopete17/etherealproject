@@ -17,5 +17,6 @@ selectQuantity.addEventListener('change', (e) => {
 		let value = productValue.innerHTML.split('$')[1]
 		let total = quantity * value
 		productTotal.innerHTML = 'USD$' + total
+		document.getElementById('orderform').action = window.location.href.split('#')[0] + "?ordertotal=" + total
 	}
 })

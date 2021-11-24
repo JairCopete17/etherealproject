@@ -1,9 +1,13 @@
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../../images/logo.webp" />
+		<meta name="author" content="Jair Copete" />
+		<meta name="keywords" content="Ethereal, Crypto, Web3, PHP, SQL, Javascript, CSS, HTML5" />
+		<meta name="description" content="Una aplicación web para rastrear sus activos digitales y cripto" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recupera tu contraseña | Ethereal</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/logo.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -14,15 +18,13 @@
       <img src="../../images/logo.webp" alt="Logo" id="logo">
       <nav>
         <ul class="header-pages">
-          <li><a href="../../index.php">Home</a></li>
-          <li><a href="#">Discover</a></li>
-          <li><a href="./pages/learn/learn.html">Learn</a></li>
+					<li><a href="../../index.php"  class="header_titles">Home</a></li>
+          <li><a href="#" class="header_titles">News</a></li>
+          <li><a href="#" class="header_titles">Learn</a></li>
+          <li><a href="#" class="header_titles">Portfolio</a></li>
         </ul>
         <ul class="header-control">
-					<li><a href="#"><img src="../../images/Notification.svg" alt="Notifications" class="header-control_icons"></a></li>
-          <li><a href="#"><img src="../../images/Setting.svg" alt="Theme selector" class="header-control_icons"></a></li>
-          <li class="header-control_special"><a href="#"><img src="../../images/Work.svg" alt="Portfolio" class="header-control_icons">Portfolio</a></li>
-          <li><a href="#"><img src="../../images/Profile.svg" alt="Profile" class="header-control_icons"></a></li>
+          <li class="header-control_special"><a href="#"><img src="../../images/Profile.svg" alt="Profile" class="header-control_icons"></a></li>
         </ul>
       </nav>
     </header>

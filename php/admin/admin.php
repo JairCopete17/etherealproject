@@ -3,9 +3,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../../images/logo.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Jair Copete" />
+		<meta name="keywords" content="Ethereal, Crypto, Web3, PHP, SQL, Javascript, CSS, HTML5" />
+		<meta name="description" content="Una aplicación web para rastrear sus activos digitales y cripto" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin | Ethereal</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/logo.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -17,9 +20,9 @@
       <nav>
         <ul class="header-pages">
 					<li><a href="../../index.php"  class="header_titles">Home</a></li>
-          <li><a href="../../pages/news/news.html" class="header_titles">News</a></li>
-          <li><a href="../../pages/learn/learn.html" class="header_titles">Learn</a></li>
-          <li><a href="../../pages/portfolio/portfolio.html" class="header_titles">Portfolio</a></li>
+          <li><a href="#" class="header_titles">News</a></li>
+          <li><a href="#" class="header_titles">Learn</a></li>
+          <li><a href="#" class="header_titles">Portfolio</a></li>
         </ul>
         <ul class="header-control">
           <li class="header-control_special"><a href="#"><img src="../../images/Profile.svg" alt="Profile" class="header-control_icons"></a></li>
@@ -33,35 +36,35 @@
         <section class="control-form_inputs">
         <article>
           <label for="id">Id</label>
-          <input type="number" for="id" name="inp_id" class="inp_id" placeholder="888" required>
+          <input type="number" for="id" name="inp_id" class="inp_id" placeholder="888">
         </article>
         <article>
           <label for="nombre">Nombre</label>
-          <input type="text" for="nombre" name="inp_nombre" class="inp_nombre" placeholder="Nombre" required>
+          <input type="text" for="nombre" name="inp_nombre" class="inp_nombre" placeholder="Nombre">
         </article>
         <article>
           <label for="apellido">Apellido</label>
-          <input type="text" for="apellido" name="inp_apellido" class="inp_apellido" placeholder="Apellido" required>
+          <input type="text" for="apellido" name="inp_apellido" class="inp_apellido" placeholder="Apellido">
         </article>
         <article>
           <label for="email">Correo electronico</label>
-          <input type="email" for="email" name="inp_email" class="inp_email" placeholder="correo@email.com" required>
+          <input type="email" for="email" name="inp_email" class="inp_email" placeholder="correo@email.com">
         </article>
         <article>
           <label for="direccion">Direccion</label>
-          <input type="direccion" for="text" name="inp_direccion" class="inp_direccion" placeholder="345 Direccion" required>
+          <input type="direccion" for="text" name="inp_direccion" class="inp_direccion" placeholder="345 Direccion">
         </article>
         <article>
           <label for="telefono">Telefono</label>
-          <input type="number" for="telefono" name="inp_telefono" class="inp_telefono" placeholder="3008881234" required>
+          <input type="number" for="telefono" name="inp_telefono" class="inp_telefono" placeholder="3008881234">
         </article>
         <article>
           <label for="btc-address">Crypto wallet</label>
-          <input type="text" for="btc-address" name="inp_btc-address" class="inp_btc-address" placeholder="Dirección de Bitcoin" required>
+          <input type="text" for="btc-address" name="inp_btc-address" class="inp_btc-address" placeholder="Dirección de Bitcoin">
         </article>
         <article>
           <label for="admin">Admin</label>
-          <input type="number" for="admin" name="inp_admin" class="inp_admin" max="1" placeholder="0" required>
+          <input type="number" for="admin" name="inp_admin" class="inp_admin" max="1" placeholder="0">
         </article>
         </section>
         <section class="control-form_actions">
@@ -74,7 +77,7 @@
           <article>
             <span>Buscar</span>
             <select name="opt_busqparticular" class="submitcrud">
-              <option value="cedula">Cedula</option>
+              <option value="id">ID</option>
               <option value="nombre">Nombre</option>
               <option value="apellido">Apellido</option>
               <option value="email">Email</option>
@@ -123,6 +126,7 @@
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Producto</th>
+                        <th>Precio total</th>
                         <th>Cantidad</th>
                         <th>Metodo</th>
                       </tr>
@@ -138,6 +142,7 @@
                           <td>" . $orderfetch['nombre'] . "</td>
                           <td>" . $orderfetch['apellido'] . "</td>
                           <td>" . $orderfetch['producto'] . "</td>
+                          <td>" . $orderfetch['precio'] . "</td>
                           <td>" . $orderfetch['cantidad'] . "</td>
                           <td>" . $orderfetch['metodo'] . "</td>
                         </tr>

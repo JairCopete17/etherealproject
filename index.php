@@ -3,9 +3,12 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="./images/logo.webp" />
+		<meta name="author" content="Jair Copete" />
+		<meta name="keywords" content="Ethereal, Crypto, Web3, PHP, SQL, Javascript, CSS, HTML5" />
+		<meta name="description" content="Una aplicación web para rastrear sus activos digitales y cripto" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ethereal</title>
+		<link rel="icon" type="image/svg+xml" href="./images/logo.webp" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -22,9 +25,9 @@
 			<nav>
 				<ul class="header-pages">
 					<li><a href="./index.php" class="header_titles">Home</a></li>
-					<li><a href="./pages/news/news.html" class="header_titles">News</a></li>
-					<li><a href="./pages/learn/learn.html" class="header_titles">Learn</a></li>
-					<li><a href="./pages/portfolio/portfolio.html" class="header_titles">Portfolio</a></li>
+					<li><a href="#" class="header_titles">News</a></li>
+					<li><a href="#" class="header_titles">Learn</a></li>
+					<li><a href="#" class="header_titles">Portfolio</a></li>
 				</ul>
 				<ul class="header-control">
 					<li class="header-control_special">
@@ -46,8 +49,8 @@
 									$_SESSION["userlastname"] = $emailfetch['apellido'];
 
 									if ($emailfetch == "") { echo "<h3 class="."sign-in_alert".">Verifica tus datos para ingresar a Ethereal.</h3>"; }
-									else if ($emailfetch['admin'] == 1) { header("Location: ./php/admin/admin.php"); }
-									else if ($emailfetch['admin'] == 0) { header("Location: ./php/client/buy.php"); }
+										else if ($emailfetch['admin'] == 1) { header("Location: ./php/admin/admin.php"); }
+										else if ($emailfetch['admin'] == 0) { header("Location: ./php/client/buy.php"); }
 
 									include('./php/closedb.php');
 								}
@@ -326,7 +329,7 @@
 		<section class="cta">
 			<article class="cta-box">
 				<h2>Crea tu propio portfolio</h2>
-				<a href="#portfolio">
+				<a href="#signin">
 					Crea ahora
 					<img src="./images/create.svg" />
 				</a>
@@ -374,20 +377,20 @@
 			<article class="community-box">
 				<h2>Conoce a la comunidad global de Ethereal.</h2>
 				<p>Unete a una comunidad en rápido crecimiento para innovadores conectados en todo el mundo, construyendo la nueva era de Internet.</p>
-				<a href="discord.gg">Comunidad <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a>
+				<a href="#">Comunidad <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a>
 			</article>
 			<article class="community-list">
 				<ul>
 					<li>
-						<h3><a href="discord.gg">Discord <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a></h3>
+						<h3><a href="https:/www.discord.gg/">Discord <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a></h3>
 						<p>Participa y charla con la comunidad mundial en Discord. ¿Tiene preguntas técnicas sobre Ethereal? Pregúntale a un desarrollador en Discord.</p>
 					</li>
 					<li>
-						<h3><a href="twitter.com/">Twitter <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a></h3>
+						<h3><a href="https:/www.twitter.com/">Twitter <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a></h3>
 						<p>Sigue a @ethereal para leer las últimas noticias y actualizaciones de todo el ecosistema.</p>
 					</li>
 					<li>
-						<h3><a href="github.com/">Github <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a></h3>
+						<h3><a href="https:/www.github.com/">Github <img src="./images/ArrowRight.svg" alt="Flecha hacia la derecha"></a></h3>
 						<p>¿Está pensando en construir con nosotros o estás interesado en asuntos de desarrolladores? Únete a la discusión.</p>
 					</li>
 				</ul>

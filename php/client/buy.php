@@ -3,9 +3,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../../images/logo.webp" />
+		<meta name="author" content="Jair Copete" />
+		<meta name="keywords" content="Ethereal, Crypto, Web3, PHP, SQL, Javascript, CSS, HTML5" />
+		<meta name="description" content="Una aplicación web para rastrear sus activos digitales y cripto" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compra | Ethereal</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/logo.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,9 +21,9 @@
       <nav>
         <ul class="header-pages">
 					<li><a href="../../index.php"  class="header_titles">Home</a></li>
-          <li><a href="../../pages/news/news.html" class="header_titles">News</a></li>
-          <li><a href="../../pages/learn/learn.html" class="header_titles">Learn</a></li>
-          <li><a href="../../pages/portfolio/portfolio.html" class="header_titles">Portfolio</a></li>
+          <li><a href="#" class="header_titles">News</a></li>
+          <li><a href="#" class="header_titles">Learn</a></li>
+          <li><a href="#" class="header_titles">Portfolio</a></li>
         </ul>
         <ul class="header-control">
           <li class="header-control_special"><a href="#"><img src="../../images/Profile.svg" alt="Profile" class="header-control_icons"></a></li>
@@ -31,7 +34,7 @@
       <?php echo "<h1>Bienvenido, " . $_SESSION['username'] .".</h1>"; ?>
       <p>Ethereal esta comprometido en diseñar las mejores soluciones para mejorar tu experiencia en la <em>Web 3.0</em>. <br>Con ello, te ofrecemos la compra de <b>licencias limitadas</b> para nuestros productos.</p>
 		</section>
-    <form action="./buy.php" method="POST" class="order-form">
+    <form action="./buy.php" method="POST" name="orderform" id="orderform" class="order-form">
       <section class="buy_product">
         <h2>Selecciona tu producto a comprar:</h2>
         <article>
@@ -47,7 +50,7 @@
       </section>
       <section class="buy_product-quantity">
         <h2>Elige la cantidad de licencias a comprar:</h2>
-        <input type="number" max="10" name="product-quantity" id="product-quantity" placeholder="Maximo 10 licencias por compra">
+        <input type="number" min='1' max="10" name="product-quantity" id="product-quantity" placeholder="Maximo 10 licencias por compra">
       </section>
       <section class="buy_method">
         <h2>Selecciona tu metodo de pago:</h2>
@@ -76,15 +79,15 @@
       $product = $_REQUEST['productselect'];
       $quantity = $_REQUEST['product-quantity'];
       $method = $_REQUEST['methodselect'];
+      $total = $_GET['ordertotal'];
 
       if ($product == 'portf') { $product = 'Portfolio tracker'; }
         else if ($product == 'nft') { $product = 'NFT Collection dashboard'; }
         else if ($product == 'hot') { $product = 'ETH Hot wallet'; }
         else if ($product == 'ai') { $product = 'AI Cryptopredictions'; }
 
-
-      $createorder = "INSERT INTO ordenes(orderid, userid, nombre, apellido, producto, cantidad, metodo)
-                        VALUES (DEFAULT, '$userid', '$username', '$userlastname', '$product', '$quantity', '$method')";
+      $createorder = "INSERT INTO ordenes(orderid, userid, nombre, apellido, producto, precio, cantidad, metodo)
+                        VALUES (DEFAULT, '$userid', '$username', '$userlastname', '$product', '$total', '$quantity', '$method')";
       $response = $db -> query($createorder);
 
       if (!$response) { echo "<script>alert('Tu orden ha fallado.')</script>"; }

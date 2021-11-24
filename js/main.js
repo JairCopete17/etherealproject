@@ -13,7 +13,6 @@ const api_thorchain = "https://api.coingecko.com/api/v3/coins/thorchain?tickers=
 setTimeout(async function getStatus() {
 	const response = await fetch(api_status)
 	const data = await response.json()
-	/* document.getElementById("status").innerHTML = data.gecko_says */
 	console.log(data.gecko_says)
 }, 500);
 
