@@ -42,7 +42,7 @@
 	color: #8e8f90;
 }
 
-.order-historial_close:hover {
+.order-historial_close:hover, .order-historial_close:focus {
 	color: #fff;
 	transition: color 0.3s;
 }
@@ -86,7 +86,7 @@
 	cursor: pointer;
 }
 
-.historialcrud:hover {
+.historialcrud:hover, .historialcrud:focus {
 	color: #fff;
 	transition: all 0.3s;
 }

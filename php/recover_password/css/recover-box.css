@@ -37,7 +37,7 @@
 	color: #8e8f90;
 }
 
-.recoverpassword-box form input[type=email]:hover {
+.recoverpassword-box form input[type=email]:hover, .recoverpassword-box form input[type=email]:focus {
 	color: #fff;
 	transition: all 0.3s;
 }
@@ -53,7 +53,7 @@
 	cursor: pointer;
 }
 
-.recoverpassword-box input[type=submit]:hover {
+.recoverpassword-box input[type=submit]:hover, .recoverpassword-box input[type=submit]:focus {
 	color: #fff;
 	transition: all 0.3s;
 }

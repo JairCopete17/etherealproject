@@ -39,7 +39,7 @@
 	color: #8e8f90;
 }
 
-.control-form form .control-form_inputs article input:hover {
+.control-form form .control-form_inputs article input:hover, .control-form form .control-form_inputs article input:focus {
 	color: #fff;
 	transition: all 0.3s;
 }
@@ -47,8 +47,17 @@
 .inp_id, .inp_admin {
 	width: 50px;
 	height: 40px;
-	-moz-appearance: textfield; /*Add webkit tools*/
+	-moz-appearance: textfield;
 }
+
+.inp_id::-webkit-outer-spin-button,
+.inp_id::-webkit-inner-spin-button,
+.inp_admin::-webkit-outer-spin-button,
+.inp_admin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 .inp_nombre {
 	width: 100px;
@@ -138,7 +147,8 @@
 	cursor: pointer;
 }
 
-.submitcrud:hover, .searchcrud:hover, .orderhistorialcrud:hover {
+.submitcrud:hover, .searchcrud:hover, .orderhistorialcrud:hover,
+.submitcrud:focus, .searchcrud:focus, .orderhistorialcrud:focus {
 	color: #fff;
 	transition: all 0.3s;
 }

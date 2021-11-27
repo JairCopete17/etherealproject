@@ -188,3 +188,9 @@
 	color: #fff;
 	transition: all 0.3s;
 }
+
+.buy_product-quantity input[type=number]::-webkit-outer-spin-button,
+.buy_product-quantity input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

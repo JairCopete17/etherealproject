@@ -211,7 +211,7 @@
 	cursor: pointer;
 }
 
-.sign-up_form input[type=submit]:hover {
+.sign-up_form input[type=submit]:hover, .sign-up_form input[type=submit]:focus {
 	color: #fff;
 	transition: all 0.3s;
 }
